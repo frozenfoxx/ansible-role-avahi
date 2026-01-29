@@ -1,0 +1,8 @@
+---
+- name: Install avahi
+  community.general.pacman:
+    name:
+      - avahi
+    state: present
+  tags:
+    - avahi

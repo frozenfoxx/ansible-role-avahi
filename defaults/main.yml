@@ -1,1 +1,7 @@
 ---
+# Service name for avahi daemon
+avahi_service_name: avahi-daemon
+
+# Service state
+avahi_service_state: started
+avahi_service_enabled: true

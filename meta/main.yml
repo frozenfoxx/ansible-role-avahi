@@ -9,6 +9,20 @@ galaxy_info:
 
   min_ansible_version: "2.10"
 
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+        - bookworm
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+        - noble
+    - name: ArchLinux
+      versions:
+        - all
+
   galaxy_tags:
     - zeroconf
     - avahi

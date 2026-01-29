@@ -4,3 +4,17 @@
   when: ansible_facts['os_family']|lower == 'debian'
   tags:
     - avahi
+
+- name: Handle installation for Arch Linux
+  ansible.builtin.import_tasks: archlinux.yml
+  when: ansible_facts['os_family']|lower == 'archlinux'
+  tags:
+    - avahi
+
+- name: Ensure avahi-daemon service is enabled and started
+  ansible.builtin.service:
+    name: "{{ avahi_service_name }}"
+    state: started
+    enabled: true
+  tags:
+    - avahi
